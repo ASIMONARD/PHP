@@ -4,18 +4,19 @@
 $weapons = ['fists', 'whip', 'gun'];
 $opponentWeapon = $weapons[rand(0,2)]; // Cela permet de choisir une arme de manière aléatoire.
 
-switch ($weapons > $opponentWeapon) {
-    case 0:
-        $stevensonWeapon = $weapons[0];
+switch ($opponentWeapon) {
+    case 'fists':
+        $stevensonWeapon = 'gun';
         break;
-    case 1:
-        $stevensonWeapon = $weapons[1];
+    case 'whip':
+        $stevensonWeapon = 'fists';
         break;
-    case 3:
-        $stevensonWeapon = $weapons[2];
+    case 'gun':
+        $stevensonWeapon = 'whip';
         break;
     default:
     $stevensonWeapon = $opponentWeaponoppenent;
 }
+echo "face a " . $opponentWeapon . "," . " ";
 echo 'Mr Stevenson chooses the' . ' ' .  $stevensonWeapon;
 ?>
